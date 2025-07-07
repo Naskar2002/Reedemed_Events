@@ -69,10 +69,10 @@ h3 {
 span {
   color: #ffba19;
 }
-/* Header Section */
-/* .top-img {
-  max-width: 100%;
-} */
+.header-img{
+  background: url("../assets/nav-top-img.png") no-repeat center/cover black;
+  height: 44px;
+}
 .nav-logo {
   max-width: 113px;
 }
