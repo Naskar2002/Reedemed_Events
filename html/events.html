@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Redeemed events</title>
+    <title>Events</title>
 
     <!-- Favicon -->
     <link rel="icon" href="../assets/logo.png">
@@ -26,9 +26,15 @@
 
     <!-- Swiper js -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+     <!-- Aos -->
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
+    <!-- Nav-bar -->
+
     <header>
         <!-- <div class="top-img position-absolute z-1 ">
             <img src="../assets/nav-top-img.png" alt="">
@@ -37,7 +43,7 @@
 
             <div class="container">
 
-                <a class="navbar-brand nav-logo" href="./index.html">
+                <a class="navbar-brand nav-logo" href="../index.html">
                     <img src="../assets/logo.png" alt="Nav-Bar-Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -48,7 +54,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav align-items-sm-center  ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active text-light  me-1" aria-current="page" href="#">Events</a>
+                            <a class="nav-link active text-light  me-1" aria-current="page" href="../html/events.html">Events</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-light me-1" href="#" role="button"
@@ -56,9 +62,9 @@
                                 Resources
                             </a>
                             <ul class="dropdown-menu ">
-                                <li><a class="dropdown-item text-light" href="#">About Us </a></li>
-                                <li><a class="dropdown-item text-light" href="#">Fees</a></li>
-                                <li><a class="dropdown-item text-light" href="#">Help Videos</a></li>
+                                <li><a class="dropdown-item text-light" href="../html/about-us.html">About Us </a></li>
+                                <li><a class="dropdown-item text-light" href="../html/price.html">Fees</a></li>
+                                <li><a class="dropdown-item text-light" href="../html/help.html">Help Videos</a></li>
 
                             </ul>
                         </li>
@@ -74,13 +80,19 @@
                             </ul>
                         </li>
                     </ul>
-                    <div class="d-flex flex-sm-column flex-lg-row   ms-lg-1 align-items-center gap-3">
-                        <a class="nav-link active text-light" aria-current="page" href="">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </a>
-                        <a class="nav-link active cart" aria-current="page" href="#">
-                            <img src="../assets/cart.png" alt="">
-                        </a>
+                 <div class="d-flex flex-sm-column flex-lg-row   ms-lg-1 align-items-center gap-3">
+                        <div class="d-flex  flex-lg-row   ms-lg-1 align-items-center gap-3">
+                            <a class="nav-link active" id="search" aria-current="page" href="#">
+                                <img src="../assets/search.png" alt="">
+                            </a>
+                            <a class="nav-link active" id="divider" aria-current="page" href="#">
+                                <img src="../assets/divider.png" alt="">
+                            </a>
+                            <a class="nav-link active" id="cart" aria-current="page" href="#">
+                                <img src="../assets/cart.png" alt="">
+                            </a>
+                        </div>
+
                         <button type="button" class="btn btn-primary px-19 py-11">
                             <a class=" text-light text-decoration-none" href="">Create Your Event</a>
                         </button>
@@ -92,13 +104,14 @@
         </nav>
 
     </header>
+
     <!-- Event-banner Section -->
     <section class="event-banner bg-black pt-5">
         <div class="sub-footer mx-auto rounded-3">
             <div class="container">
                 <div class="row p-3">
-                    <div class="col-12 col-lg-6">
-                        <h2 class="pt-5">Search<span> event.</span></span></h2>
+                    <div data-aos="fade-up-right" class="col-12 col-lg-6">
+                        <h2  class="pt-5">Search<span> event.</span></span></h2>
                         <div class="sub-brdr">
                             <img src="../assets/h2_border.png" alt="">
                         </div>
@@ -110,7 +123,7 @@
                             <a class=" text-light text-decoration-none" href="">Search Now</a>
                         </button>
                     </div>
-                    <div class="col-12 col-lg-6 ">
+                    <div data-aos="fade-up-left" class="col-12 col-lg-6 ">
                         <div class="f-img mx-auto">
                             <img src="../assets/events/events-banner.png" alt="">
                         </div>
@@ -120,18 +133,19 @@
             </div>
         </div>
     </section>
+
     <!-- event_category-Section -->
     <section class="event_category bg-black ">
         <div class="container">
             <div class="e-heading text-center">
-                <h2>Category of <span>events</span></h2>
-                <div class="sub-brdr mx-auto">
+                <h2 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">Category of <span>events</span></h2>
+                <div data-aos="fade-up" data-aos-duration="1000" class="sub-brdr mx-auto">
                     <img src="../assets/h2_border.png" alt="">
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-lg-4">
-                    <div class="card border border-white rounded-1 bg-black mx-auto mb-md-2">
+                <div data-aos="flip-left" class="col-12 col-lg-4">
+                    <div class="card border border-white rounded-1 bg-black mx-auto mb-sm-2">
                         <div class="card-img mx-auto">
                             <img src="../assets/event_cat_1.png" alt="...">
                         </div>
@@ -147,8 +161,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4">
-                    <div class="card border border-white rounded-1 bg-black mx-auto mb-md-2">
+                <div data-aos="flip-right" class="col-12 col-lg-4">
+                    <div class="card border border-white rounded-1 bg-black mx-auto mb-sm-2">
                         <div class="card-img mx-auto">
                             <img src="../assets/event_cat_2.png" alt="...">
                         </div>
@@ -164,8 +178,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4">
-                    <div class="card border border-white rounded-1 bg-black mx-auto mb-md-2">
+                <div data-aos="flip-left" class="col-12 col-lg-4">
+                    <div class="card border border-white rounded-1 bg-black mx-auto mb-sm-2">
                         <div class="card-img mx-auto">
                             <img src="../assets/event_cat_3.png" alt="...">
                         </div>
@@ -185,19 +199,20 @@
             </div>
         </div>
     </section>
+
     <!-- feature-event-Section -->
     <Section class="feature-event">
         <div class="container">
             <div class="row py-5">
                 <div class="col-12 col-lg-6">
-                    <div class="circle mx-auto rounded-circle">
+                    <div data-aos="zoom-in-up" class="circle mx-auto rounded-circle">
                         <div class="circle-img ">
                             <img class="rounded-circle" src="../assets/Mask_Group.png" alt="">
                         </div>
 
                     </div>
                 </div>
-                <div class="col-12 col-lg-6">
+                <div data-aos="zoom-in-left" class="col-12 col-lg-6">
                     <div class="f-event-content">
                         <h2>Featured <span>event.</span></h2>
                         <div class="sub-brdr">
@@ -248,139 +263,276 @@
     <section class="trending-events bg-black py-5">
         <div class="container">
             <div class="trending-eve text-center">
-                <h2>Trending <span>events</span></h2>
-                <div class="sub-brdr mx-auto">
+                <h2 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">Trending <span>events</span></h2>
+                <div data-aos="fade-up" data-aos-duration="1000" class="sub-brdr mx-auto">
                     <img src="../assets/h2_border.png" alt="">
                 </div>
                 <p>Take a peek at some amazing events using Ticket Redeemed</p>
             </div>
             <div class="row">
-                <div class="col-12 col-lg-4">
-                    <div class="trend-eve-img">
-                        <img src="../assets/events/trend-event-1.png" alt="">
+                <div data-aos="flip-left" class="col-12 col-lg-4">
+                    <div class="event-card mx-auto">
+                        <div class="trend-eve-img">
+                            <img src="../assets/events/trend-event-1.png" alt="">
+                        </div>
+                        <p>May 05, 2023</p>
+                        <p>Lorem ipsum dolor sit amet lorem</p>
+                        <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                        <a class="text-decoration-none text-warning" href="./event_details.html">Learn More
+                             <span>
+                            <img class="arrow" src="../assets/arrow.png" alt="">
+                           </span> </a>
                     </div>
-                    <p>May 05, 2023</p>
-                    <p>Lorem ipsum dolor sit amet lorem</p>
-                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                    <a class="text-decoration-none text-warning" href="./event_details.html">Learn More <span>→</span></a>
                 </div>
-                <div class="col-12 col-lg-4">
-                    <div class="trend-eve-img">
-                        <img src="../assets/events/trend-event-2.png" alt="">
+
+                <div data-aos="flip-right" class="col-12 col-lg-4">
+                    <div class="event-card mx-auto">
+                        <div class="trend-eve-img">
+                            <img src="../assets/events/trend-event-2.png" alt="">
+                        </div>
+                        <p>May 05, 2023</p>
+                        <p>Lorem ipsum dolor sit amet lorem</p>
+                        <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                        <a class="text-decoration-none text-warning" href="">Learn More  <span>
+                            <img class="arrow" src="../assets/arrow.png" alt="">
+                           </span> </a>
                     </div>
-                    <p>May 05, 2023</p>
-                    <p>Lorem ipsum dolor sit amet lorem</p>
-                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                    <a class="text-decoration-none text-warning" href="">Learn More</a>
+
                 </div>
-                <div class="col-12 col-lg-4">
-                    <div class="trend-eve-img">
-                        <img src="../assets/events/trend-event-3.png" alt="">
+                <div data-aos="flip-left" class="col-12 col-lg-4">
+                    <div class="event-card mx-auto">
+                        <div class="trend-eve-img">
+                            <img src="../assets/events/trend-event-3.png" alt="">
+                        </div>
+                        <p>May 05, 2023</p>
+                        <p>Lorem ipsum dolor sit amet lorem</p>
+                        <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                        <a class="text-decoration-none text-warning" href="">Learn More  <span>
+                            <img class="arrow" src="../assets/arrow.png" alt="">
+                           </span> </a>
                     </div>
-                    <p>May 05, 2023</p>
-                    <p>Lorem ipsum dolor sit amet lorem</p>
-                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                    <a class="text-decoration-none text-warning" href="">Learn More</a>
+
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ourevents Section -->
-    <div class="Our-events py-5">
+    <!-- Artists Section -->
+    <section class="artist">
         <div class="container">
-            <div class="Our-events-content text-center">
-                <h2>Our <span>events</span></h2>
-                <div class="sub-brdr mx-auto">
+            <div class="art-content">
+                <h2 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" class="text-center">Featured <span>artists</span></h2>
+                <div data-aos="fade-up" data-aos-duration="1000" class="sub-brdr mx-auto">
                     <img src="../assets/h2_border.png" alt="">
                 </div>
-                <p>Lorem Ipsum is simply dummy text</p>
             </div>
-            <div class="swiper mySwiper">
+
+            <div class="agent">
+                <!-- Slider main container -->
+                <div class="swiper" id="agent">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="agent-card mx-auto">
+                                <div class="agent-img ">
+                                    <img src="../assets/Artist-1.png" alt="">
+                                </div>
+                                <p>Jacob Martine</p>
+                                <p class="Designation">Designer</p>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="agent-card mx-auto">
+                                <div class="agent-img">
+                                    <img src="../assets/Artist-2.png" alt="">
+                                </div>
+                                <p>David Wing</p>
+                                <p class="Designation">Designer</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="agent-card mx-auto">
+                                <div class="agent-img">
+                                    <img src="../assets/Artist-3.png" alt="">
+                                </div>
+                                <p>Shane Watson</p>
+                                <p class="Designation">Designer</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="agent-card mx-auto">
+                                <div class="agent-img">
+                                    <img src="../assets/Artist-4.png" alt="">
+                                </div>
+                                <p>Alice Mele</p>
+                                <p class="Designation">Designer</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide ">
+                            <div class="agent-card mx-auto">
+                                <div class="agent-img">
+                                    <img src="../assets/Artist-5.png" alt="">
+                                </div>
+                                <p>Jhon Morrison</p>
+                                <p class="Designation">Designer</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="agent-card mx-auto">
+                                <div class="agent-img">
+                                    <img src="../assets/Artist-7.png" alt="">
+                                </div>
+                                <p>Therese Gogh</p>
+                                <p class="Designation">Designer</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!--navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- ourevents Section -->
+    <div class="Our-events bg-black py-5">
+        <div class="container">
+            <div class="Our-events-content text-center">
+                <h2 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">Our <span>events</span></h2>
+                <div data-aos="fade-up" data-aos-duration="1000" class="sub-brdr mx-auto">
+                    <img src="../assets/h2_border.png" alt="">
+                </div>
+                <p data-aos="fade-up" data-aos-duration="1000">Lorem Ipsum is simply dummy text</p>
+            </div>
+            <div class="swiper" id="events">
                 <div class="swiper-wrapper">
                     <!-- Card Slide -->
                     <div class="swiper-slide">
                         <div class="row">
-                            <div class="col-12 col-lg-4">
-                                <div class="trend-eve-img">
-                                    <img src="../assets/events/event-1.png" alt="">
+                            <div class="col-12 col-lg-4 mt-2">
+                                <div class="event-card mx-auto">
+                                    <div class="trend-eve-img">
+                                        <img src="../assets/events/event-1.png" alt="">
+                                    </div>
+                                    <p>May 05, 2023</p>
+                                    <p>Lorem ipsum dolor sit amet lorem</p>
+                                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                                    <a class="text-decoration-none text-warning" href="">Learn More <span><img
+                                                class="arrow" src="../assets/arrow.png" alt=""></span></a>
                                 </div>
-                                <p>May 05, 2023</p>
-                                <p>Lorem ipsum dolor sit amet lorem</p>
-                                <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                                <a class="text-decoration-none text-warning" href="">Learn More <span>→</span></a>
                             </div>
-                            <div class="col-12 col-lg-4">
-                                <div class="trend-eve-img">
-                                    <img src="../assets/events/event-2.png" alt="">
+                            <div class="col-12 col-lg-4 mt-2">
+                                <div class="event-card mx-auto">
+                                    <div class="trend-eve-img">
+                                        <img src="../assets/events/event-2.png" alt="">
+                                    </div>
+                                    <p>May 05, 2023</p>
+                                    <p>Lorem ipsum dolor sit amet lorem</p>
+                                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                                    <a class="text-decoration-none text-warning" href="">Learn More <span><img
+                                                class="arrow" src="../assets/arrow.png" alt=""></span></a>
                                 </div>
-                                <p>May 05, 2023</p>
-                                <p>Lorem ipsum dolor sit amet lorem</p>
-                                <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                                <a class="text-decoration-none text-warning" href="">Learn More</a>
                             </div>
-                            <div class="col-12 col-lg-4">
-                                <div class="trend-eve-img">
-                                    <img src="../assets/events/event-3.png" alt="">
+                            <div class="col-12 col-lg-4 mt-2">
+                                <div class="event-card mx-auto">
+                                    <div class="trend-eve-img">
+                                        <img src="../assets/events/event-3.png" alt="">
+                                    </div>
+                                    <p>May 05, 2023</p>
+                                    <p>Lorem ipsum dolor sit amet lorem</p>
+                                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                                    <a class="text-decoration-none text-warning" href="">Learn More <span><img
+                                                class="arrow" src="../assets/arrow.png" alt=""></span></a>
                                 </div>
-                                <p>May 05, 2023</p>
-                                <p>Lorem ipsum dolor sit amet lorem</p>
-                                <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                                <a class="text-decoration-none text-warning" href="">Learn More</a>
                             </div>
-                            <div class="col-12 col-lg-4">
-                                <div class="trend-eve-img">
-                                    <img src="../assets/events/event-4.png" alt="">
+
+                            <div class="col-12 col-lg-4 mt-2">
+                                <div class="event-card mx-auto">
+                                    <div class="trend-eve-img">
+                                        <img src="../assets/events/event-4.png" alt="">
+                                    </div>
+                                    <p>May 05, 2023</p>
+                                    <p>Lorem ipsum dolor sit amet lorem</p>
+                                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                                    <a class="text-decoration-none text-warning" href="">Learn More <span><img
+                                                class="arrow" src="../assets/arrow.png" alt=""></span></a>
                                 </div>
-                                <p>May 05, 2023</p>
-                                <p>Lorem ipsum dolor sit amet lorem</p>
-                                <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                                <a class="text-decoration-none text-warning" href="">Learn More</a>
+
                             </div>
-                            <div class="col-12 col-lg-4">
-                                <div class="trend-eve-img">
-                                    <img src="../assets/events/event-5.png" alt="">
+                            <div class="col-12 col-lg-4 mt-2">
+                                <div class="event-card mx-auto">
+                                    <div class="trend-eve-img">
+                                        <img src="../assets/events/event-5.png" alt="">
+                                    </div>
+                                    <p>May 05, 2023</p>
+                                    <p>Lorem ipsum dolor sit amet lorem</p>
+                                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                                    <a class="text-decoration-none text-warning" href="">Learn More <span><img
+                                                class="arrow" src="../assets/arrow.png" alt=""></span></a>
                                 </div>
-                                <p>May 05, 2023</p>
-                                <p>Lorem ipsum dolor sit amet lorem</p>
-                                <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                                <a class="text-decoration-none text-warning" href="">Learn More</a>
+
                             </div>
-                            <div class="col-12 col-lg-4">
-                                <div class="trend-eve-img">
-                                    <img src="../assets/events/event-6.png" alt="">
+                            <div class="col-12 col-lg-4 mt-2">
+                                <div class="event-card mx-auto">
+                                    <div class="trend-eve-img">
+                                        <img src="../assets/events/event-6.png" alt="">
+                                    </div>
+                                    <p>May 05, 2023</p>
+                                    <p>Lorem ipsum dolor sit amet lorem</p>
+                                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                                    <a class="text-decoration-none text-warning" href="">Learn More <span><img
+                                                class="arrow" src="../assets/arrow.png" alt=""></span></a>
                                 </div>
-                                <p>May 05, 2023</p>
-                                <p>Lorem ipsum dolor sit amet lorem</p>
-                                <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                                <a class="text-decoration-none text-warning" href="">Learn More</a>
+
                             </div>
-                            <div class="col-12 col-lg-4">
-                                <div class="trend-eve-img">
-                                    <img src="../assets/events/event-7.png" alt="">
+
+                            <div class="col-12 col-lg-4 mt-2">
+                                <div class="event-card mx-auto">
+                                    <div class="trend-eve-img">
+                                        <img src="../assets/events/event-7.png" alt="">
+                                    </div>
+                                    <p>May 05, 2023</p>
+                                    <p>Lorem ipsum dolor sit amet lorem</p>
+                                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                                    <a class="text-decoration-none text-warning" href="">Learn More <span><img
+                                                class="arrow" src="../assets/arrow.png" alt=""></span></a>
                                 </div>
-                                <p>May 05, 2023</p>
-                                <p>Lorem ipsum dolor sit amet lorem</p>
-                                <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                                <a class="text-decoration-none text-warning" href="">Learn More</a>
+
                             </div>
-                            <div class="col-12 col-lg-4">
-                                <div class="trend-eve-img">
-                                    <img src="../assets/events/event-8.png" alt="">
+                            <div class="col-12 col-lg-4 mt-2">
+                                <div class="event-card mx-auto">
+                                    <div class="trend-eve-img">
+                                        <img src="../assets/events/event-8.png" alt="">
+                                    </div>
+                                    <p>May 05, 2023</p>
+                                    <p>Lorem ipsum dolor sit amet lorem</p>
+                                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                                    <a class="text-decoration-none text-warning" href="">Learn More <span><img
+                                                class="arrow" src="../assets/arrow.png" alt=""></span></a>
                                 </div>
-                                <p>May 05, 2023</p>
-                                <p>Lorem ipsum dolor sit amet lorem</p>
-                                <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                                <a class="text-decoration-none text-warning" href="">Learn More</a>
+
                             </div>
-                            <div class="col-12 col-lg-4">
-                                <div class="trend-eve-img">
-                                    <img src="../assets/events/event-9.png" alt="">
+                            <div class="col-12 col-lg-4 mt-2">
+                                <div class="event-card mx-auto">
+                                    <div class="trend-eve-img">
+                                        <img src="../assets/events/event-9.png" alt="">
+                                    </div>
+                                    <p>May 05, 2023</p>
+                                    <p>Lorem ipsum dolor sit amet lorem</p>
+                                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                                    <a class="text-decoration-none text-warning" href="">Learn More <span><img
+                                                class="arrow" src="../assets/arrow.png" alt=""></span></a>
                                 </div>
-                                <p>May 05, 2023</p>
-                                <p>Lorem ipsum dolor sit amet lorem</p>
-                                <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                                <a class="text-decoration-none text-warning" href="">Learn More</a>
+
                             </div>
                         </div>
 
@@ -388,86 +540,122 @@
 
                     <div class="swiper-slide">
                         <div class="row">
-                            <div class="col-12 col-lg-4">
-                                <div class="trend-eve-img">
-                                    <img src="../assets/events/event-9.png" alt="">
+                            <div class="col-12 col-lg-4 mt-2">
+                                <div class="event-card mx-auto">
+                                    <div class="trend-eve-img">
+                                        <img src="../assets/events/event-9.png" alt="">
+                                    </div>
+                                    <p>May 05, 2023</p>
+                                    <p>Lorem ipsum dolor sit amet lorem</p>
+                                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                                    <a class="text-decoration-none text-warning" href="">Learn More <span><img
+                                                class="arrow" src="../assets/arrow.png" alt=""></span></a>
                                 </div>
-                                <p>May 05, 2023</p>
-                                <p>Lorem ipsum dolor sit amet lorem</p>
-                                <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                                <a class="text-decoration-none text-warning" href="">Learn More <span>→</span></a>
+
                             </div>
-                            <div class="col-12 col-lg-4">
-                                <div class="trend-eve-img">
-                                    <img src="../assets/events/event-8.png" alt="">
+                            <div class="col-12 col-lg-4 mt-2">
+                                <div class="event-card mx-auto">
+                                    <div class="trend-eve-img">
+                                        <img src="../assets/events/event-8.png" alt="">
+                                    </div>
+                                    <p>May 05, 2023</p>
+                                    <p>Lorem ipsum dolor sit amet lorem</p>
+                                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                                    <a class="text-decoration-none text-warning" href="">Learn More <span><img
+                                                class="arrow" src="../assets/arrow.png" alt=""></span></a>
+
                                 </div>
-                                <p>May 05, 2023</p>
-                                <p>Lorem ipsum dolor sit amet lorem</p>
-                                <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                                <a class="text-decoration-none text-warning" href="">Learn More</a>
                             </div>
-                            <div class="col-12 col-lg-4">
-                                <div class="trend-eve-img">
-                                    <img src="../assets/events/event-7.png" alt="">
+                            <div class="col-12 col-lg-4 mt-2">
+                                <div class="event-card mx-auto">
+                                    <div class="trend-eve-img">
+                                        <img src="../assets/events/event-7.png" alt="">
+                                    </div>
+                                    <p>May 05, 2023</p>
+                                    <p>Lorem ipsum dolor sit amet lorem</p>
+                                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                                    <a class="text-decoration-none text-warning" href="">Learn More <span><img
+                                                class="arrow" src="../assets/arrow.png" alt=""></span></a>
+
                                 </div>
-                                <p>May 05, 2023</p>
-                                <p>Lorem ipsum dolor sit amet lorem</p>
-                                <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                                <a class="text-decoration-none text-warning" href="">Learn More</a>
                             </div>
-                            <div class="col-12 col-lg-4">
-                                <div class="trend-eve-img">
-                                    <img src="../assets/events/event-6.png" alt="">
+                            <div class="col-12 col-lg-4 mt-2">
+                                <div class="event-card mx-auto">
+                                    <div class="trend-eve-img">
+                                        <img src="../assets/events/event-6.png" alt="">
+                                    </div>
+                                    <p>May 05, 2023</p>
+                                    <p>Lorem ipsum dolor sit amet lorem</p>
+                                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                                    <a class="text-decoration-none text-warning" href="">Learn More <span><img
+                                                class="arrow" src="../assets/arrow.png" alt=""></span></a>
+
                                 </div>
-                                <p>May 05, 2023</p>
-                                <p>Lorem ipsum dolor sit amet lorem</p>
-                                <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                                <a class="text-decoration-none text-warning" href="">Learn More</a>
                             </div>
-                            <div class="col-12 col-lg-4">
-                                <div class="trend-eve-img">
-                                    <img src="../assets/events/event-5.png" alt="">
+                            <div class="col-12 col-lg-4 mt-2">
+                                <div class="event-card mx-auto">
+                                    <div class="trend-eve-img">
+                                        <img src="../assets/events/event-5.png" alt="">
+                                    </div>
+                                    <p>May 05, 2023</p>
+                                    <p>Lorem ipsum dolor sit amet lorem</p>
+                                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                                    <a class="text-decoration-none text-warning" href="">Learn More <span><img
+                                                class="arrow" src="../assets/arrow.png" alt=""></span></a>
+
                                 </div>
-                                <p>May 05, 2023</p>
-                                <p>Lorem ipsum dolor sit amet lorem</p>
-                                <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                                <a class="text-decoration-none text-warning" href="">Learn More</a>
                             </div>
-                            <div class="col-12 col-lg-4">
-                                <div class="trend-eve-img">
-                                    <img src="../assets/events/event-4.png" alt="">
+                            <div class="col-12 col-lg-4 mt-2">
+                                <div class="event-card mx-auto">
+                                    <div class="trend-eve-img">
+                                        <img src="../assets/events/event-4.png" alt="">
+                                    </div>
+                                    <p>May 05, 2023</p>
+                                    <p>Lorem ipsum dolor sit amet lorem</p>
+                                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                                    <a class="text-decoration-none text-warning" href="">Learn More <span><img
+                                                class="arrow" src="../assets/arrow.png" alt=""></span></a>
+
                                 </div>
-                                <p>May 05, 2023</p>
-                                <p>Lorem ipsum dolor sit amet lorem</p>
-                                <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                                <a class="text-decoration-none text-warning" href="">Learn More</a>
                             </div>
-                            <div class="col-12 col-lg-4">
-                                <div class="trend-eve-img">
-                                    <img src="../assets/events/event-3.png" alt="">
+                            <div class="col-12 col-lg-4 mt-2">
+                                <div class="event-card mx-auto">
+                                    <div class="trend-eve-img">
+                                        <img src="../assets/events/event-3.png" alt="">
+                                    </div>
+                                    <p>May 05, 2023</p>
+                                    <p>Lorem ipsum dolor sit amet lorem</p>
+                                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                                    <a class="text-decoration-none text-warning" href="">Learn More <span><img
+                                                class="arrow" src="../assets/arrow.png" alt=""></span></a>
+
                                 </div>
-                                <p>May 05, 2023</p>
-                                <p>Lorem ipsum dolor sit amet lorem</p>
-                                <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                                <a class="text-decoration-none text-warning" href="">Learn More</a>
                             </div>
-                            <div class="col-12 col-lg-4">
-                                <div class="trend-eve-img">
-                                    <img src="../assets/events/event-2.png" alt="">
+                            <div class="col-12 col-lg-4 mt-2">
+                                <div class="event-card mx-auto">
+                                    <div class="trend-eve-img">
+                                        <img src="../assets/events/event-2.png" alt="">
+                                    </div>
+                                    <p>May 05, 2023</p>
+                                    <p>Lorem ipsum dolor sit amet lorem</p>
+                                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                                    <a class="text-decoration-none text-warning" href="">Learn More <span><img
+                                                class="arrow" src="../assets/arrow.png" alt=""></span></a>
+
                                 </div>
-                                <p>May 05, 2023</p>
-                                <p>Lorem ipsum dolor sit amet lorem</p>
-                                <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                                <a class="text-decoration-none text-warning" href="">Learn More</a>
                             </div>
-                            <div class="col-12 col-lg-4">
-                                <div class="trend-eve-img">
-                                    <img src="../assets/events/event-1.png" alt="">
+                            <div class="col-12 col-lg-4 mt-2">
+                                <div class="event-card mx-auto">
+                                    <div class="trend-eve-img">
+                                        <img src="../assets/events/event-1.png" alt="">
+                                    </div>
+                                    <p>May 05, 2023</p>
+                                    <p>Lorem ipsum dolor sit amet lorem</p>
+                                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                                    <a class="text-decoration-none text-warning" href="">Learn More <span><img
+                                                class="arrow" src="../assets/arrow.png" alt=""></span></a>
+
                                 </div>
-                                <p>May 05, 2023</p>
-                                <p>Lorem ipsum dolor sit amet lorem</p>
-                                <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                                <a class="text-decoration-none text-warning" href="">Learn More</a>
                             </div>
                         </div>
 
@@ -475,91 +663,131 @@
 
                     <div class="swiper-slide">
                         <div class="row">
-                            <div class="col-12 col-lg-4">
-                                <div class="trend-eve-img">
-                                    <img src="../assets/events/trend-event-1.png" alt="">
+                            <div class="col-12 col-lg-4 mt-2">
+                                <div class="event-card mx-auto">
+                                    <div class="trend-eve-img">
+                                        <img src="../assets/events/trend-event-1.png" alt="">
+                                    </div>
+                                    <p>May 05, 2023</p>
+                                    <p>Lorem ipsum dolor sit amet lorem</p>
+                                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                                    <a class="text-decoration-none text-warning" href="">Learn More
+                                        <span>
+                                            <img class="arrow" src="../assets/arrow.png" alt="">
+                                        </span>
+                                    </a>
                                 </div>
-                                <p>May 05, 2023</p>
-                                <p>Lorem ipsum dolor sit amet lorem</p>
-                                <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                                <a class="text-decoration-none text-warning" href="">Learn More <span>→</span></a>
+
                             </div>
-                            <div class="col-12 col-lg-4">
-                                <div class="trend-eve-img">
-                                    <img src="../assets/events/trend-event-2.png" alt="">
+                            <div class="col-12 col-lg-4 mt-2">
+                                <div class="event-card mx-auto">
+                                    <div class="trend-eve-img">
+                                        <img src="../assets/events/trend-event-2.png" alt="">
+                                    </div>
+                                    <p>May 05, 2023</p>
+                                    <p>Lorem ipsum dolor sit amet lorem</p>
+                                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                                    <a class="text-decoration-none text-warning" href="">Learn More <span><img
+                                                class="arrow" src="../assets/arrow.png" alt=""></span></a>
+
                                 </div>
-                                <p>May 05, 2023</p>
-                                <p>Lorem ipsum dolor sit amet lorem</p>
-                                <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                                <a class="text-decoration-none text-warning" href="">Learn More</a>
                             </div>
-                            <div class="col-12 col-lg-4">
-                                <div class="trend-eve-img">
-                                    <img src="../assets/events/trend-event-3.png" alt="">
+                            <div class="col-12 col-lg-4 mt-2">
+                                <div class="event-card mx-auto">
+                                    <div class="trend-eve-img">
+                                        <img src="../assets/events/trend-event-3.png" alt="">
+                                    </div>
+                                    <p>May 05, 2023</p>
+                                    <p>Lorem ipsum dolor sit amet lorem</p>
+                                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                                    <a class="text-decoration-none text-warning" href="">Learn More <span><img
+                                                class="arrow" src="../assets/arrow.png" alt=""></span></a>
+
                                 </div>
-                                <p>May 05, 2023</p>
-                                <p>Lorem ipsum dolor sit amet lorem</p>
-                                <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                                <a class="text-decoration-none text-warning" href="">Learn More</a>
                             </div>
-                            <div class="col-12 col-lg-4">
-                                <div class="trend-eve-img">
-                                    <img src="../assets/events/trend-event-3.png" alt="">
+                            <div class="col-12 col-lg-4 mt-2">
+                                <div class="event-card mx-auto">
+                                    <div class="trend-eve-img">
+                                        <img src="../assets/events/trend-event-3.png" alt="">
+                                    </div>
+                                    <p>May 05, 2023</p>
+                                    <p>Lorem ipsum dolor sit amet lorem</p>
+                                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                                    <a class="text-decoration-none text-warning" href="">Learn More <span><img
+                                                class="arrow" src="../assets/arrow.png" alt=""></span></a>
+
                                 </div>
-                                <p>May 05, 2023</p>
-                                <p>Lorem ipsum dolor sit amet lorem</p>
-                                <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                                <a class="text-decoration-none text-warning" href="">Learn More</a>
                             </div>
-                            <div class="col-12 col-lg-4">
-                                <div class="trend-eve-img">
-                                    <img src="../assets/events/trend-event-3.png" alt="">
+                            <div class="col-12 col-lg-4 mt-2">
+                                <div class="event-card mx-auto">
+                                    <div class="trend-eve-img">
+                                        <img src="../assets/events/trend-event-3.png" alt="">
+                                    </div>
+                                    <p>May 05, 2023</p>
+                                    <p>Lorem ipsum dolor sit amet lorem</p>
+                                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                                    <a class="text-decoration-none text-warning" href="">Learn More <span><img
+                                                class="arrow" src="../assets/arrow.png" alt=""></span></a>
+
                                 </div>
-                                <p>May 05, 2023</p>
-                                <p>Lorem ipsum dolor sit amet lorem</p>
-                                <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                                <a class="text-decoration-none text-warning" href="">Learn More</a>
                             </div>
-                            <div class="col-12 col-lg-4">
-                                <div class="trend-eve-img">
-                                    <img src="../assets/events/trend-event-3.png" alt="">
+                            <div class="col-12 col-lg-4 mt-2">
+                                <div class="event-card mx-auto">
+                                    <div class="trend-eve-img">
+                                        <img src="../assets/events/trend-event-3.png" alt="">
+                                    </div>
+                                    <p>May 05, 2023</p>
+                                    <p>Lorem ipsum dolor sit amet lorem</p>
+                                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                                    <a class="text-decoration-none text-warning" href="">Learn More <span><img
+                                                class="arrow" src="../assets/arrow.png" alt=""></span></a>
+
                                 </div>
-                                <p>May 05, 2023</p>
-                                <p>Lorem ipsum dolor sit amet lorem</p>
-                                <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                                <a class="text-decoration-none text-warning" href="">Learn More</a>
                             </div>
-                            <div class="col-12 col-lg-4">
-                                <div class="trend-eve-img">
-                                    <img src="../assets/events/trend-event-3.png" alt="">
+                            <div class="col-12 col-lg-4 mt-2">
+                                <div class="event-card mx-auto">
+                                    <div class="trend-eve-img">
+                                        <img src="../assets/events/trend-event-3.png" alt="">
+                                    </div>
+                                    <p>May 05, 2023</p>
+                                    <p>Lorem ipsum dolor sit amet lorem</p>
+                                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                                    <a class="text-decoration-none text-warning" href="">Learn More <span><img
+                                                class="arrow" src="../assets/arrow.png" alt=""></span></a>
+
                                 </div>
-                                <p>May 05, 2023</p>
-                                <p>Lorem ipsum dolor sit amet lorem</p>
-                                <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                                <a class="text-decoration-none text-warning" href="">Learn More</a>
                             </div>
-                            <div class="col-12 col-lg-4">
-                                <div class="trend-eve-img">
-                                    <img src="../assets/events/trend-event-3.png" alt="">
+                            <div class="col-12 col-lg-4 mt-2">
+                                <div class="event-card mx-auto">
+                                    <div class="trend-eve-img">
+                                        <img src="../assets/events/trend-event-3.png" alt="">
+                                    </div>
+                                    <p>May 05, 2023</p>
+                                    <p>Lorem ipsum dolor sit amet lorem</p>
+                                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                                    <a class="text-decoration-none text-warning" href="">Learn More <span><img
+                                                class="arrow" src="../assets/arrow.png" alt=""></span></a>
+
                                 </div>
-                                <p>May 05, 2023</p>
-                                <p>Lorem ipsum dolor sit amet lorem</p>
-                                <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                                <a class="text-decoration-none text-warning" href="">Learn More</a>
                             </div>
-                            <div class="col-12 col-lg-4">
-                                <div class="trend-eve-img">
-                                    <img src="../assets/events/trend-event-3.png" alt="">
+                            <div class="col-12 col-lg-4 mt-2">
+                                <div class="event-card mx-auto">
+                                    <div class="trend-eve-img">
+                                        <img src="../assets/events/trend-event-3.png" alt="">
+                                    </div>
+                                    <p>May 05, 2023</p>
+                                    <p>Lorem ipsum dolor sit amet lorem</p>
+                                    <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
+                                    <a class="text-decoration-none text-warning" href="">Learn More <span>
+                                            <img class="arrow" src="../assets/arrow.png" alt="">
+                                        </span></a>
+
                                 </div>
-                                <p>May 05, 2023</p>
-                                <p>Lorem ipsum dolor sit amet lorem</p>
-                                <p>Duis dui nibh, gravida sit amet dolor eget, eleifend iaculis sem. Proin non </p>
-                                <a class="text-decoration-none text-warning" href="">Learn More</a>
                             </div>
                         </div>
 
                     </div>
-                    <!-- Duplicate the above .swiper-slide 8 more times with different images if needed -->
+                    
                 </div>
 
                 <!-- Pagination -->
@@ -576,7 +804,7 @@
         <div class="sub-footer mx-auto rounded-3">
             <div class="container">
                 <div class="row p-3">
-                    <div class="col-12 col-lg-6">
+                    <div data-aos="fade-down-right" class="col-12 col-lg-6">
                         <h2 class="pt-5">Let's grow your <span> event together.</span></h2>
                         <div class="sub-brdr">
                             <img src="../assets/h2_border.png" alt="">
@@ -589,8 +817,8 @@
                             <a class=" text-light text-decoration-none" href="">Join</a>
                         </button>
                     </div>
-                    <div class="col-12 col-lg-6 ">
-                        <div class="f-img mx-auto">
+                    <div data-aos="fade-down-left" class="col-12 col-lg-6 ">
+                        <div class="f-img mx-auto mt-2">
                             <img src="../assets/sub_footer.png" alt="">
                         </div>
 
@@ -601,20 +829,22 @@
 
         <!-- Footer -->
 
-        <div class="container bg-black footer">
+        <div data-aos="fade-in" data-aos-anchor-placement="top-bottom" class="container bg-black footer">
             <div class="row">
                 <div class="col-6 col-lg-3">
                     <div class="footer-logo">
-                        <img src="../assets/logo.png" alt="">
+                        <a href="">
+                            <img src="../assets/logo.png" alt="">
+                        </a>
                     </div>
                     <p class="f-para">Lorem Ipsum is simply dumm yww text of the printing and tyetting industry. Lorem
                         Ipsum has been d tyetting.</p>
                     <h4>Follow us</h4>
                     <div class="social-media-icons d-flex text-md-center">
-                        <img src="../assets/insta.png" alt="">
-                        <img src="../assets/fb.png" alt="">
-                        <img src="../assets/X.png" alt="">
-                        <img src="../assets/linked_in.png" alt="">
+                        <div><img src="../assets/insta.png" alt=""></div>
+                        <div><img src="../assets/fb.png" alt=""></div>
+                        <div><img src="../assets/X.png" alt=""></div>
+                        <div><img src="../assets/linked_in.png" alt=""></div>
                     </div>
                 </div>
                 <div class="col-6 col-lg-3">
@@ -633,7 +863,7 @@
                 </div>
                 <div class="col-6 col-lg-3">
                     <div class="list">
-                        <h4>Legal</h4>
+                        <h4 class="mt-sm-2">Legal</h4>
                         <ul class="list-unstyled d-flex flex-column">
                             <li><a href="">Help</a></li>
                             <li><a href="">Terms & services</a></li>
@@ -644,7 +874,7 @@
                 </div>
                 <div class="col-6 col-lg-3">
                     <div class="list">
-                        <h4>Made For You</h4>
+                        <h4 class="mt-sm-2">Made For You</h4>
                         <ul class="list-unstyled d-flex flex-column ">
                             <li><a href="">Alternative to eventbrite </a></li>
                             <li><a href="">Online event ticketing</a></li>
@@ -661,7 +891,7 @@
         </div>
 
     </footer>
-    
+
     <!-- Bootstrap-JS_CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
@@ -673,8 +903,11 @@
 
     <!-- Swiper-Js-CDN -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+       <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    
 
     <script src="../js/events.js"></script>
 </body>
-
-</html>

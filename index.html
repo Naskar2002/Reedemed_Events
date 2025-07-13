@@ -22,15 +22,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Aos -->
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
     <header>
-       <div class="header-top">
-        <div class="header-img">
+        <div class="header-top">
+            <div class="header-img">
 
+            </div>
         </div>
-       </div> 
         <nav class="navbar navbar-expand-lg  bg-black ">
 
             <div class="container">
@@ -55,9 +58,9 @@
                                 Resources
                             </a>
                             <ul class="dropdown-menu ">
-                                <li><a class="dropdown-item text-light" href="#">About Us </a></li>
-                                <li><a class="dropdown-item text-light" href="#">Fees</a></li>
-                                <li><a class="dropdown-item text-light" href="#">Help Videos</a></li>
+                                <li><a class="dropdown-item text-light" href="./html/about-us.html">About Us </a></li>
+                                <li><a class="dropdown-item text-light" href="./html/price.html">Fees</a></li>
+                                <li><a class="dropdown-item text-light" href="./html/help.html">Help Videos</a></li>
 
                             </ul>
                         </li>
@@ -74,12 +77,18 @@
                         </li>
                     </ul>
                     <div class="d-flex flex-sm-column flex-lg-row   ms-lg-1 align-items-center gap-3">
-                        <a class="nav-link active text-light" aria-current="page" href="">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </a>
-                        <a class="nav-link active cart" aria-current="page" href="#">
-                            <img src="./assets/cart.png" alt="">
-                        </a>
+                        <div class="d-flex  flex-lg-row   ms-lg-1 align-items-center gap-3">
+                            <a class="nav-link active" id="search" aria-current="page" href="#">
+                                <img src="./assets/search.png" alt="">
+                            </a>
+                            <a class="nav-link active" id="divider" aria-current="page" href="#">
+                                <img src="./assets/divider.png" alt="">
+                            </a>
+                            <a class="nav-link active" id="cart" aria-current="page" href="#">
+                                <img src="./assets/cart.png" alt="">
+                            </a>
+                        </div>
+
                         <button type="button" class="btn btn-primary px-19 py-11">
                             <a class=" text-light text-decoration-none" href="">Create Your Event</a>
                         </button>
@@ -97,19 +106,24 @@
     <section class="banner-section bg-black  ">
         <div class="container">
             <div class="row py-5">
-                <div class="col-12 col-lg-6">
+                <div data-aos="fade-up-right" class="col-12 col-lg-6">
                     <div class="b-content mx-auto">
-                        <h1>Welcome to <br> <span>Redeemed </span> Events</h1>
+                        <h1 data-aos="flip-up">Welcome to <br> <span>Redeemed </span> Events</h1>
 
                         <p>A simple solution for your next event. No gimmics, no hidden fees.</p>
 
-                        <button type="button" class="btn btn-primary px-19 py-11">
-                            <a class=" text-light text-decoration-none" href="">Create Your Event</a>
-                        </button>
+                        <div class="bns">
+                            <button type="button" class="btn btn-primary px-19 py-11">
+                                <a class=" text-light text-decoration-none" href="">Create Your Event</a>
+                            </button>
+                        </div>
+                        <div class="arrow position-relative">
+                            <img src="./assets/Banner_img_1.png" alt="">
+                        </div>
                     </div>
 
                 </div>
-                <div class="col-12 col-lg-6">
+                <div data-aos="fade-up-left" class="col-12 col-lg-6">
                     <div class="b-img mx-auto">
                         <img src="./assets/Banner_img.png" alt="">
                     </div>
@@ -124,48 +138,60 @@
     <section class="whyus py-5">
         <div class="container">
             <div class="why-heading text-center">
-                <h2>Why <span>us</span></h2>
-                <div class="sub-brdr mx-auto">
+                <h2 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">Why <span>us</span></h2>
+                <div data-aos="fade-up" data-aos-duration="1000" class="sub-brdr mx-auto">
                     <img src="./assets/h2_border.png" alt="">
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-lg-6">
+                <div data-aos="zoom-in" class="col-12 col-lg-6">
                     <div class="why-img mx-auto">
                         <img src="./assets/Whyus.png" alt="">
                     </div>
                 </div>
                 <div class="col-12 col-lg-6 before-num">
-                    <div class="cards mx-auto d-flex gap-4 border border-white rounded-1 py-4 px-4">
-                        <div class="icon">
-                            <img src="../assets/us_card_1.png" alt="">
-                        </div>
-                        <div class="card-content">
-                            <h3>Low Cost</h3>
-                            <p>We have clear, straightforward fees. 3%+30c plus processing fees. We save you an average
-                                of 6% per ticket sold vs. leading ticketing websites.</p>
-                        </div>
-                    </div>
-                    <div class="cards mx-auto d-flex gap-4 border border-white rounded-1 py-4 px-4">
-                        <div class="icon">
-                            <img src="./assets/us_card_2.png" alt="">
-                        </div>
-                        <div class="card-content">
-                            <h3>Advancing the kingdom</h3>
-                            <p>Our organization is run by Kingdom minded individuals, supporting Kingdom minded
-                                organizations. A portion of profits go towards supporting the local church.</p>
-                        </div>
-                    </div>
-                    <div class="cards mx-auto d-flex gap-4 border border-white rounded-1 py-4 px-4 position-relative">
-                        <div class="icon">
-                            <img src="./assets/us_card_3.png" alt="">
-                        </div>
-                        <div class="card-content">
-                            <div class="settings position-absolute ">
-                                <img src="./assets/Whyus_Settings.png" alt="">
+                    <div data-aos="flip-up" class="d-flex">
+                        <div class="number ">01</div>
+                        <div class="cards mx-auto d-flex gap-4 border border-white py-4 px-4">
+                            <div class="icon">
+                                <img src="./assets/us_card_1.png" alt="">
                             </div>
-                            <h3>Simple</h3>
-                            <p>An easy, user friendly platform with no contracts or complex charges.</p>
+                            <div class="card-content">
+                                <h3>Low Cost</h3>
+                                <p>We have clear, straightforward fees. 3%+30c plus processing fees. We save you an
+                                    average
+                                    of 6% per ticket sold vs. leading ticketing websites.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-aos="flip-down" class="d-flex">
+                        <div class="number">02</div>
+                        <div class="cards mx-auto d-flex gap-4 border border-white py-4 px-4">
+                            <div class="icon">
+                                <img src="./assets/us_card_2.png" alt="">
+                            </div>
+                            <div class="card-content">
+                                <h3>Advancing the kingdom</h3>
+                                <p>Our organization is run by Kingdom minded individuals, supporting Kingdom minded
+                                    organizations. A portion of profits go towards supporting the local church.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-aos="flip-up" class="d-flex">
+                        <div class="number">03</div>
+                        <div class="cards mx-auto d-flex gap-4 border border-white py-4 px-4 position-relative">
+                            <div class="icon">
+                                <img src="./assets/us_card_3.png" alt="">
+                            </div>
+                            <div class="card-content">
+                                <div class="settings position-absolute ">
+                                    <img src="./assets/Whyus_Settings.png" alt="">
+                                </div>
+                                <h3>Simple</h3>
+                                <p>An easy, user friendly platform with no contracts or complex charges.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -181,13 +207,15 @@
     <section class="event_category bg-black ">
         <div class="container">
             <div class="e-heading text-center">
-                <h2>Category of <span>events</span></h2>
-                <div class="sub-brdr mx-auto">
+                <h2 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">Category of
+                    <span>events</span>
+                </h2>
+                <div data-aos="fade-up" data-aos-duration="1000" class="sub-brdr mx-auto">
                     <img src="./assets/h2_border.png" alt="">
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-lg-4">
+                <div data-aos="flip-left" class="col-12 col-lg-4">
                     <div class="card border border-white rounded-1 bg-black mx-auto mb-md-2">
                         <div class="card-img mx-auto">
                             <img src="./assets/event_cat_1.png" alt="...">
@@ -204,7 +232,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4">
+                <div data-aos="flip-right" class="col-12 col-lg-4">
                     <div class="card border border-white rounded-1 bg-black mx-auto mb-md-2">
                         <div class="card-img mx-auto">
                             <img src="./assets/event_cat_2.png" alt="...">
@@ -221,7 +249,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4">
+                <div data-aos="flip-left" class="col-12 col-lg-4">
                     <div class="card border border-white rounded-1 bg-black mx-auto mb-md-2">
                         <div class="card-img mx-auto">
                             <img src="./assets/event_cat_3.png" alt="...">
@@ -249,14 +277,14 @@
         <div class="container">
             <div class="row py-5">
                 <div class="col-12 col-lg-6">
-                    <div class="circle mx-auto rounded-circle">
+                    <div data-aos="zoom-in-up" class="circle mx-auto rounded-circle">
                         <div class="circle-img ">
                             <img class="rounded-circle" src="./assets/Mask_Group.png" alt="">
                         </div>
 
                     </div>
                 </div>
-                <div class="col-12 col-lg-6">
+                <div data-aos="zoom-in-left" class="col-12 col-lg-6">
                     <div class="f-event-content">
                         <h2>Featured <span>event.</span></h2>
                         <div class="sub-brdr">
@@ -268,22 +296,22 @@
                             galley of type and scrambled it to make a type specimen book.
                         </p>
                         <div class="days">
-                            <div class="time">
+                            <div data-aos="fade-up" data-aos-duration="500" class="time">
                                 <p>02</p>
                                 <div class="d-h-m-s">Days</div>
                             </div>
 
-                            <div class="time h-s">
+                            <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" class="time h-s">
                                 <p>23</p>
                                 <div class="d-h-m-s">Days</div>
                             </div>
 
-                            <div class="time min">
+                            <div data-aos="fade-up" data-aos-duration="500" class="time min">
                                 <p>35</p>
                                 <div class="d-h-m-s">Days</div>
                             </div>
 
-                            <div class="time h-s">
+                            <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" class="time h-s">
                                 <p>52</p>
                                 <div class="d-h-m-s">Days</div>
                             </div>
@@ -308,7 +336,7 @@
     <Section class="simple-fees bg-black">
         <div class="container">
             <div class="row py-5">
-                <div class="col-12 col-lg-6">
+                <div data-aos="zoom-in-right" class="col-12 col-lg-6">
                     <div class="simple-fees-content">
                         <h2>Simple fees. <br><span>No contracts.</span> </h2>
                         <div class="sub-brdr">
@@ -328,12 +356,12 @@
                     </div>
 
                 </div>
-                <div class="col-12 col-lg-6">
+                <div data-aos="zoom-in-up" class="col-12 col-lg-6">
                     <div class="circle mx-auto rounded-circle position-relative ">
                         <div class="circle-img ">
                             <img class="rounded-circle" src="./assets/image38.png" alt="">
                         </div>
-                        <div class="ticket-sold text-center rounded-2 position-absolute ">
+                        <div data-aos="fade-right" class="ticket-sold text-center rounded-2 position-absolute ">
                             <p class="font-60 mb-0">30¢</p>
                             <p class="font-40 mb-0">+</p>
                             <div class="b-radius mx-auto">
@@ -357,7 +385,7 @@
         <div class="sub-footer mx-auto rounded-3">
             <div class="container">
                 <div class="row p-3">
-                    <div class="col-12 col-lg-6">
+                    <div data-aos="fade-down-right" class="col-12 col-lg-6">
                         <h2 class="pt-5">Let's grow your <span> event together.</span></h2>
                         <div class="sub-brdr">
                             <img src="./assets/h2_border.png" alt="">
@@ -370,8 +398,8 @@
                             <a class=" text-light text-decoration-none" href="">Join</a>
                         </button>
                     </div>
-                    <div class="col-12 col-lg-6 ">
-                        <div class="f-img mx-auto">
+                    <div data-aos="fade-down-left" class="col-12 col-lg-6 ">
+                        <div class="f-img mx-auto mt-2">
                             <img src="./assets/sub_footer.png" alt="">
                         </div>
 
@@ -382,39 +410,41 @@
 
         <!-- Footer -->
 
-        <div class="container bg-black footer">
+        <div data-aos="fade-in" data-aos-anchor-placement="top-bottom" class="container bg-black footer">
             <div class="row">
                 <div class="col-6 col-lg-3">
                     <div class="footer-logo">
-                        <img src="./assets/logo.png" alt="">
+                        <a href="">
+                            <img src="./assets/logo.png" alt="">
+                        </a>
                     </div>
                     <p class="f-para">Lorem Ipsum is simply dumm yww text of the printing and tyetting industry. Lorem
                         Ipsum has been d tyetting.</p>
                     <h4>Follow us</h4>
                     <div class="social-media-icons d-flex text-md-center">
-                        <img src="./assets/insta.png" alt="">
-                        <img src="./assets/fb.png" alt="">
-                        <img src="./assets/X.png" alt="">
-                        <img src="./assets/linked_in.png" alt="">
+                        <div><img src="./assets/insta.png" alt=""></div>
+                        <div><img src="./assets/fb.png" alt=""></div>
+                        <div><img src="./assets/X.png" alt=""></div>
+                        <div><img src="./assets/linked_in.png" alt=""></div>
                     </div>
                 </div>
                 <div class="col-6 col-lg-3">
                     <div class="list">
                         <h4>Navigate</h4>
                         <ul class="list-unstyled d-flex flex-column">
-                            <li><a class="" href="">Event</a></li>
+                            <li><a href="./html/events.html">Event</a></li>
                             <li><a href="">Resources</a></li>
                             <li><a href="">Cart</a></li>
-                            <li><a href="">Faq</a></li>
-                            <li><a href="">Review</a></li>
-                            <li><a href="">Contact us</a> </li>
+                            <li><a href="./html/question.html">Faq</a></li>
+                            <li><a href="./html/review.html">Review</a></li>
+                            <li><a href="./html/contact-us.html">Contact us</a> </li>
                         </ul>
                     </div>
 
                 </div>
                 <div class="col-6 col-lg-3">
                     <div class="list">
-                        <h4>Legal</h4>
+                        <h4 class="mt-sm-2">Legal</h4>
                         <ul class="list-unstyled d-flex flex-column">
                             <li><a href="">Help</a></li>
                             <li><a href="">Terms & services</a></li>
@@ -425,7 +455,7 @@
                 </div>
                 <div class="col-6 col-lg-3">
                     <div class="list">
-                        <h4>Made For You</h4>
+                        <h4 class="mt-sm-2">Made For You</h4>
                         <ul class="list-unstyled d-flex flex-column ">
                             <li><a href="">Alternative to eventbrite </a></li>
                             <li><a href="">Online event ticketing</a></li>
@@ -451,6 +481,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- AOS Initialization -->
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

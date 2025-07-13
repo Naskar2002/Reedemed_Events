@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FAQ</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/logo.png">
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
@@ -17,6 +19,10 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Aos -->
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body class="bg-black">
@@ -28,7 +34,7 @@
 
             <div class="container">
 
-                <a class="navbar-brand nav-logo" href="./index.html">
+                <a class="navbar-brand nav-logo" href="../index.html">
                     <img src="../assets/logo.png" alt="Nav-Bar-Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -40,7 +46,7 @@
                     <ul class="navbar-nav align-items-sm-center  ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link xyz active text-light  me-1" aria-current="page"
-                                href="./html/events.html">Events</a>
+                                href="../html/events.html">Events</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-light me-1" href="#" role="button"
@@ -48,9 +54,9 @@
                                 Resources
                             </a>
                             <ul class="dropdown-menu ">
-                                <li><a class="dropdown-item text-light" href="#">About Us </a></li>
-                                <li><a class="dropdown-item text-light" href="#">Fees</a></li>
-                                <li><a class="dropdown-item text-light" href="#">Help Videos</a></li>
+                                <li><a class="dropdown-item text-light" href="../html/about-us.html">About Us </a></li>
+                                <li><a class="dropdown-item text-light" href="../html/price.html">Fees</a></li>
+                                <li><a class="dropdown-item text-light" href="../html/help.html">Help Videos</a></li>
 
                             </ul>
                         </li>
@@ -67,12 +73,18 @@
                         </li>
                     </ul>
                     <div class="d-flex flex-sm-column flex-lg-row   ms-lg-1 align-items-center gap-3">
-                        <a class="nav-link active text-light" aria-current="page" href="">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </a>
-                        <a class="nav-link active cart" aria-current="page" href="#">
-                            <img src="./assets/cart.png" alt="">
-                        </a>
+                        <div class="d-flex  flex-lg-row   ms-lg-1 align-items-center gap-3">
+                            <a class="nav-link active" id="search" aria-current="page" href="#">
+                                <img src="../assets/search.png" alt="">
+                            </a>
+                            <a class="nav-link active" id="divider" aria-current="page" href="#">
+                                <img src="../assets/divider.png" alt="">
+                            </a>
+                            <a class="nav-link active" id="cart" aria-current="page" href="#">
+                                <img src="../assets/cart.png" alt="">
+                            </a>
+                        </div>
+
                         <button type="button" class="btn btn-primary px-19 py-11">
                             <a class=" text-light text-decoration-none" href="">Create Your Event</a>
                         </button>
@@ -88,11 +100,13 @@
     <section class="question bg-black">
         <div class="container">
             <div class="content">
-                <h2 class="text-center">Frequently asked<span> questions</span></h2>
-                <div class="sub-brdr mx-auto">
+                <h2 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" class="text-center">Frequently
+                    asked<span> questions</span></h2>
+                <div data-aos="fade-up" data-aos-duration="1000" class="sub-brdr mx-auto">
                     <img src="../assets/h2_border.png" alt="">
                 </div>
-                <p class="text-center mx-auto bann-desc">Lorem Ipsum is simply dummy text of the printing and
+                <p data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="text-center mx-auto bann-desc">Lorem
+                    Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
                 </p>
                 <div class="mx-auto que-btn">
@@ -107,7 +121,7 @@
         </div>
     </section>
 
-
+    <!-- Question-1 -->
     <section class="questions py-3">
         <div class="container">
             <div class="accordion">
@@ -119,7 +133,7 @@
                     </span>
                 </div>
                 <div class="accordion-content">
-                    <p>
+                    <p class="answer">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et dolore
@@ -136,16 +150,17 @@
 
     </section>
 
+    <!-- Question-2 -->
     <section class="questions py-3">
         <div class="container">
             <div class="accordion">
-                <div class="accordion-header">
-                    <span class="number">3-</span>
+                <div class="accordion-header-2">
+                    <span class="number">2-</span>
                     <span class="title">Aenean ornare sem id velit facilisis auctor?</span>
-                    <span class="arrow"><img src="../assets/events/arrow-2.png" alt=""></span>
+                    <span class="arrow-2"><img src="../assets/events/arrow-2.png" alt=""></span>
                 </div>
-                <div class="accordion-content">
-                    <p>
+                <div class="accordion-content-2">
+                    <p class="answer">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et dolore
@@ -162,16 +177,17 @@
 
     </section>
 
+    <!-- Question-3 -->
     <section class="questions py-3">
         <div class="container">
             <div class="accordion">
-                <div class="accordion-header">
+                <div class="accordion-header-3">
                     <span class="number">3-</span>
                     <span class="title">Aenean ornare sem id velit facilisis auctor?</span>
-                    <span class="arrow"><img src="../assets/events/arrow-2.png" alt=""></span>
+                    <span class="arrow-3"><img src="../assets/events/arrow-2.png" alt=""></span>
                 </div>
-                <div class="accordion-content">
-                    <p>
+                <div class="accordion-content-3">
+                    <p class="answer">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et dolore
@@ -188,16 +204,17 @@
 
     </section>
 
+    <!-- Question-4 -->
     <section class="questions py-3">
         <div class="container">
             <div class="accordion">
-                <div class="accordion-header">
-                    <span class="number">3-</span>
-                    <span class="title">Aenean ornare sem id velit facilisis auctor?</span>
-                    <span class="arrow"><img src="../assets/events/arrow-2.png" alt=""></span>
+                <div class="accordion-header-4">
+                    <span class="number">4-</span>
+                    <span class="title">Nulla semper magna at pharetra tempus?</span>
+                    <span class="arrow-4"><img src="../assets/events/arrow-2.png" alt=""></span>
                 </div>
-                <div class="accordion-content">
-                    <p>
+                <div class="accordion-content-4">
+                    <p class="answer">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et dolore
@@ -214,16 +231,17 @@
 
     </section>
 
+    <!-- Question-5 -->
     <section class="questions py-3">
         <div class="container">
             <div class="accordion">
-                <div class="accordion-header">
-                    <span class="number">3-</span>
-                    <span class="title">Aenean ornare sem id velit facilisis auctor?</span>
-                    <span class="arrow"><img src="../assets/events/arrow-2.png" alt=""></i></span>
+                <div class="accordion-header-5">
+                    <span class="number">5-</span>
+                    <span class="title">Duis sagittis enim ac neque luctus, sed varius neque accumsan?</span>
+                    <span class="arrow-5"><img src="../assets/events/arrow-2.png" alt=""></i></span>
                 </div>
-                <div class="accordion-content">
-                    <p>
+                <div class="accordion-content-5">
+                    <p class="answer">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et dolore
@@ -240,16 +258,17 @@
 
     </section>
 
+    <!-- Question-6 -->
     <section class="questions py-3">
         <div class="container">
             <div class="accordion">
-                <div class="accordion-header">
-                    <span class="number">3-</span>
-                    <span class="title">Aenean ornare sem id velit facilisis auctor?</span>
-                    <span class="arrow"><img src="../assets/events/arrow-2.png" alt=""></span>
+                <div class="accordion-header-6">
+                    <span class="number">6-</span>
+                    <span class="title">Duis quis massa vel diam semper accumsan?</span>
+                    <span class="arrow-6"><img src="../assets/events/arrow-2.png" alt=""></span>
                 </div>
-                <div class="accordion-content">
-                    <p>
+                <div class="accordion-content-6">
+                    <p class="answer">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et dolore
@@ -266,16 +285,17 @@
 
     </section>
 
+    <!-- Question-7 -->
     <section class="questions py-3">
         <div class="container">
             <div class="accordion">
-                <div class="accordion-header">
-                    <span class="number">3-</span>
-                    <span class="title">Aenean ornare sem id velit facilisis auctor?</span>
-                    <span class="arrow"><img src="../assets/events/arrow-2.png" alt=""></span>
+                <div class="accordion-header-7">
+                    <span class="number">7-</span>
+                    <span class="title">Aliquam tempor lacus sed nisi egestas, sed tristique nisl molestie?</span>
+                    <span class="arrow-7"><img src="../assets/events/arrow-2.png" alt=""></span>
                 </div>
-                <div class="accordion-content">
-                    <p>
+                <div class="accordion-content-7">
+                    <p class="answer">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore
                         et dolore
@@ -292,6 +312,32 @@
 
     </section>
 
+    <!-- Question-8 -->
+    <section class="questions py-3">
+        <div class="container">
+            <div class="accordion">
+                <div class="accordion-header-8">
+                    <span class="number">8-</span>
+                    <span class="title">Aenean ornare sem id velit facilisis auctor?</span>
+                    <span class="arrow-8"><img src="../assets/events/arrow-2.png" alt=""></span>
+                </div>
+                <div class="accordion-content-8">
+                    <p class="answer">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore
+                        et dolore
+                        magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
 
     <!--Sub-footer & Footer -->
     <footer class="bg-black p-2">
@@ -300,7 +346,7 @@
         <div class="sub-footer mx-auto rounded-3">
             <div class="container">
                 <div class="row p-3">
-                    <div class="col-12 col-lg-6">
+                    <div data-aos="fade-down-right" class="col-12 col-lg-6">
                         <h2 class="pt-5">Let's grow your <span> event together.</span></h2>
                         <div class="sub-brdr">
                             <img src="../assets/h2_border.png" alt="">
@@ -313,8 +359,8 @@
                             <a class=" text-light text-decoration-none" href="">Join</a>
                         </button>
                     </div>
-                    <div class="col-12 col-lg-6 ">
-                        <div class="f-img mx-auto">
+                    <div data-aos="fade-down-left" class="col-12 col-lg-6 ">
+                        <div class="f-img mx-auto mt-2">
                             <img src="../assets/sub_footer.png" alt="">
                         </div>
 
@@ -325,39 +371,41 @@
 
         <!-- Footer -->
 
-        <div class="container bg-black footer">
+        <div data-aos="fade-in" data-aos-anchor-placement="top-bottom" class="container bg-black footer">
             <div class="row">
                 <div class="col-6 col-lg-3">
                     <div class="footer-logo">
-                        <img src="../assets/logo.png" alt="">
+                        <a href="">
+                            <img src="../assets/logo.png" alt="">
+                        </a>
                     </div>
                     <p class="f-para">Lorem Ipsum is simply dumm yww text of the printing and tyetting industry. Lorem
                         Ipsum has been d tyetting.</p>
                     <h4>Follow us</h4>
                     <div class="social-media-icons d-flex text-md-center">
-                        <img src="../assets/insta.png" alt="">
-                        <img src="../assets/fb.png" alt="">
-                        <img src="../assets/X.png" alt="">
-                        <img src="../assets/linked_in.png" alt="">
+                        <div><img src="../assets/insta.png" alt=""></div>
+                        <div><img src="../assets/fb.png" alt=""></div>
+                        <div><img src="../assets/X.png" alt=""></div>
+                        <div><img src="../assets/linked_in.png" alt=""></div>
                     </div>
                 </div>
                 <div class="col-6 col-lg-3">
                     <div class="list">
                         <h4>Navigate</h4>
                         <ul class="list-unstyled d-flex flex-column">
-                            <li><a class="" href="">Event</a></li>
+                            <li><a href="../html/events.html">Event</a></li>
                             <li><a href="">Resources</a></li>
                             <li><a href="">Cart</a></li>
-                            <li><a href="">Faq</a></li>
-                            <li><a href="">Review</a></li>
-                            <li><a href="">Contact us</a> </li>
+                            <li><a href="../html/question.html">Faq</a></li>
+                            <li><a href="../html/review.html">Review</a></li>
+                            <li><a href="../html/contact-us.html">Contact us</a> </li>
                         </ul>
                     </div>
 
                 </div>
                 <div class="col-6 col-lg-3">
                     <div class="list">
-                        <h4>Legal</h4>
+                        <h4 class="mt-sm-2">Legal</h4>
                         <ul class="list-unstyled d-flex flex-column">
                             <li><a href="">Help</a></li>
                             <li><a href="">Terms & services</a></li>
@@ -368,7 +416,7 @@
                 </div>
                 <div class="col-6 col-lg-3">
                     <div class="list">
-                        <h4>Made For You</h4>
+                        <h4 class="mt-sm-2">Made For You</h4>
                         <ul class="list-unstyled d-flex flex-column ">
                             <li><a href="">Alternative to eventbrite </a></li>
                             <li><a href="">Online event ticketing</a></li>
@@ -398,6 +446,13 @@
 
     <!-- JQuery cdn -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- AOS INtialization -->
+    <script>
+        AOS.init();
+    </script>
 
     <!-- Index JS -->
     <script src="../js/index.js"></script>

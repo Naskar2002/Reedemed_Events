@@ -24,7 +24,11 @@ p {
 }
 .dropdown-menu {
   --bs-dropdown-link-hover-bg: none !important;
-  
+}
+a {
+  text-decoration: none !important;
+  display: inline-block;
+  color: white;
 }
 .navbar-nav .dropdown-menu {
   position: absolute !important;
@@ -47,6 +51,9 @@ p {
   border-radius: 2px;
   box-shadow: 2px 2px #ffba19;
 }
+
+/* Vanilla CSS */
+/* Common Classes */
 html,body{
   overflow-x: hidden !important;
 }
@@ -56,7 +63,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: "Coustard", sans-serif;
   color: #ffffff;
 }
@@ -71,16 +79,10 @@ h3 {
 span {
   color: #ffba19;
 }
-a {
-  display: inline-block;
-  color: #ffffff;
-  text-decoration: none;
+.header-img {
+  background: url("../assets/nav-top-img.png") no-repeat center/cover black;
+  height: 44px;
 }
-
-/* Header Section */
-/* .top-img {
-  max-width: 100%;
-} */
 .nav-logo {
   max-width: 113px;
 }
@@ -88,7 +90,8 @@ a {
   max-width: 100%;
   object-fit: contain;
 }
-#search{
+
+#search {
   max-width: 24px;
 }
 #search > img {
@@ -110,63 +113,157 @@ a {
   object-fit: contain;
 }
 
-/* event-desc Section */
+/* About-banner-section */
+.about-banner {
+  padding-block: 80px;
+}
+.banner,
+.banner > img {
+  max-width: 100%;
+}
+.banner > img {
+  object-fit: contain;
+}
 
-.event-img {
-  max-width: 517px;
+.sub-brdr {
+  max-width: 73px;
 }
-.event-img > img {
-  max-width: 100%;
-  border-radius: 10px;
-}
-.artist-img {
-  max-width: 50px;
-  max-height: 50px;
-}
-.artist-img > img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-}
-.o-img {
-  max-width: 117px;
-  gap: 25px;
-  margin-top: 19px;
-}
-.o-img > img {
+.sub-brdr > img {
   max-width: 100%;
   object-fit: contain;
-  border-radius: 10px;
 }
-hr {
-  color: #ffffff;
+.banner-content > p {
+  max-width: 761px;
 }
-
-/* key-feat. section */
-
-.key-feat {
-  background-color: #141414;
-  padding-block: 95px;
-}
-.headings :hover {
-  color: #ba3e3e;
-}
-
-/* Trending events */
-.event-card{
-  max-width: 364px;
-}
-.trend-eve-img {
+.cards {
+  background-color: #131313;
+  padding-block: 40px;
   max-width: 360px;
-}
-.trend-eve-img > img {
-  max-width: 100%;
+  border: 1px solid white;
   border-radius: 10px;
 }
-.trending-events > .row p {
-  max-width: 364px;
+.banner-cards {
+  margin-top: 98px;
+}
+.c-img {
+  max-width: 70px;
+}
+.c-img > img {
+  max-width: 100%;
+  object-fit: contain;
+}
+.c-content h4 {
+  font-size: 18px;
+  margin-top: 31px;
+}
+/* About-Redeemed  */
+.circle-img {
+  max-width: 476px;
+}
+.circle-img > img {
+  max-width: 100%;
+  object-fit: contain;
+}
+.btm-img {
+  max-width: 450px;
+  bottom: 72px;
+}
+.btm-img > img {
+  max-width: 100%;
+  object-fit: contain;
+}
+.redeemed-content {
+  max-width: 508px;
+}
+.redeemed-content p {
+  font-size: 18px;
+}
+.events {
+  margin-top: 35px;
+}
+.about {
+  margin-block: 10px;
+}
+.about .img {
+  max-width: 43px;
+}
+.about .img > img {
+  max-width: 100%;
+  object-fit: contain;
 }
 
+/* Whyus Section */
+.number {
+  font-size: 70px;
+  font-weight: 900;
+  background: transparent;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+.whyus {
+  background-color: #141414;
+}
+.whyus p {
+  max-width: 272px;
+}
+.sub-brdr {
+  max-width: 73px;
+}
+.sub-brdr > img {
+  max-width: 100%;
+  object-fit: contain;
+}
+.why-img {
+  /* max-height: 614px; */
+  max-width: 614px;
+}
+.why-img > img {
+  max-height: 100%;
+  max-width: 100%;
+}
+.cards {
+  max-width: 460px;
+  /* max-height: 206px; */
+  margin-block: 20px;
+  border-radius: 10px;
+}
+.icon {
+  max-width: 70px;
+}
+.icon > img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.settings {
+  max-width: 91px;
+  right: -90px;
+  top: -30px;
+}
+.settings > img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Team Section */
+.team {
+  padding-block: 102px;
+}
+.team .sub-brdr {
+  margin-bottom: 50px;
+}
+.agent {
+  max-width: 262px;
+}
+.agent img {
+  max-width: 100%;
+  object-fit: contain;
+}
+.name {
+  font-family: "Coustard";
+  margin-top: 10px;
+  font-size: 18px;
+}
 /* Sub-footer */
 
 .sub-footer {
@@ -213,11 +310,11 @@ h4 {
   /* flex-wrap: wrap; */
   margin-top: 22px;
 }
-.social-media-icons > div{
+.social-media-icons > div {
   max-width: 40px;
   /* max-height: 100%; */
 }
-.social-media-icons>div>img{
+.social-media-icons > div > img {
   max-width: 100%;
   object-fit: cover;
 }
@@ -229,27 +326,32 @@ ul li {
   font-size: 14px;
 }
 
-/* media-queries */
+/* Media Queries */
 
-/* Common Classes */
+@media screen and (max-width: 1300px) {
+  .settings {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 576px) {
-  /* Common -Classes */
+  /* Common-Classes */
   h1 {
     font-size: 45px;
     margin-bottom: 18px;
   }
   h2 {
-    font-size: 35px;
+    font-size: 37px;
     margin-bottom: 4px;
   }
   h3 {
     font-size: 20px;
   }
   p {
-    font-size: 15px;
+    font-size: 14px;
   }
 
-  /* Nav-bar */
+  /* Navbar-Responsive(Hamberger) */
   .align-items-sm-center {
     align-items: center !important;
   }
@@ -257,16 +359,50 @@ ul li {
     flex-direction: column !important;
   }
 
-  /* Key feat-section */
-  .key-feat {
-    padding-block: 30px;
+  /* About-banner-section */
+  .about-banner {
+    padding-block: 40px;
+  }
+  .banner-cards {
+    margin-top: 46px;
+  }
+  .banner-content > h2 {
+    margin-top: 16px;
+  }
+
+  /* About-redeemed */
+  .btm-img {
+    bottom: 50px;
+  }
+  .redeemed-content p {
+    font-size: 14px;
+  }
+  .events {
+    margin-top: 20px;
+  }
+
+  /* Why us Section */
+  .number {
+    font-size: 40px;
+    font-weight: 900;
+    background: transparent;
+    margin-top: 20px;
+    margin-right: 10px;
+  }
+
+  /* Team Section */
+  .team {
+    padding-block: 50px;
+  }
+  .team .sub-brdr {
+    margin-bottom: 30px;
   }
 
   /* footer-section */
   .footer-logo,
-.footer-logo > a{
-  margin: 0 auto 10px;
-}
+  .footer-logo > a {
+    margin: 0 auto 10px;
+  }
   .footer .col-6 {
     flex: 0 0 auto;
     width: 100%;
@@ -278,13 +414,14 @@ ul li {
   .list {
     margin-top: 10px;
   }
-  .footer .list h4 ,.footer h4 {
+  .footer .list h4,
+  .footer h4 {
     text-align: center;
   }
   .footer .list ul {
     align-items: center;
   }
-  .social-media-icons{
+  .social-media-icons {
     margin: 0 auto;
   }
 }
