@@ -21,7 +21,6 @@ p {
 }
 .dropdown-menu {
   --bs-dropdown-link-hover-bg: none !important;
-  
 }
 a {
   text-decoration: none !important;
@@ -61,7 +60,8 @@ a {
 
 /* Vanilla CSS */
 /* Common Classes */
-html,body{
+html,
+body {
   overflow-x: hidden !important;
 }
 body {
@@ -86,9 +86,10 @@ span {
   color: #ffba19;
 }
 /* Header Section */
-/* .top-img {
-  max-width: 100%;
-} */
+.header-img {
+  background: url("../assets/nav-top-img.png") no-repeat center/cover black;
+  height: 44px;
+}
 .nav-logo {
   max-width: 113px;
 }
@@ -96,7 +97,7 @@ span {
   max-width: 100%;
   object-fit: contain;
 }
-#search{
+#search {
   max-width: 24px;
 }
 #search > img {
@@ -276,11 +277,11 @@ h4 {
   /* flex-wrap: wrap; */
   margin-top: 22px;
 }
-.social-media-icons > div{
+.social-media-icons > div {
   max-width: 40px;
   /* max-height: 100%; */
 }
-.social-media-icons>div>img{
+.social-media-icons > div > img {
   max-width: 100%;
   object-fit: cover;
 }
@@ -316,10 +317,10 @@ ul li {
     font-size: 15px;
   }
 
-.bann-desc {
+  .bann-desc {
     max-width: 761px;
     font-size: 16px;
-}
+  }
 
   /* Accordion */
   .accordion-header .title,
@@ -348,12 +349,11 @@ ul li {
     font-size: 16px;
   }
 
-
   /* footer-section */
-.footer-logo,
-.footer-logo > a{
-  margin: 0 auto 10px;
-}
+  .footer-logo,
+  .footer-logo > a {
+    margin: 0 auto 10px;
+  }
   .footer .col-6 {
     flex: 0 0 auto;
     width: 100%;
@@ -365,13 +365,14 @@ ul li {
   .list {
     margin-top: 10px;
   }
-  .footer .list h4 ,.footer h4 {
+  .footer .list h4,
+  .footer h4 {
     text-align: center;
   }
   .footer .list ul {
     align-items: center;
   }
-  .social-media-icons{
+  .social-media-icons {
     margin: 0 auto;
   }
 }
