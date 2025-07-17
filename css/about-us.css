@@ -22,6 +22,18 @@ p {
 .navbar-nav .nav-link:hover {
   color: #ef4b4b !important;
 }
+.nav-item {
+  list-style-type: none !important;
+}
+.offcanvas-body .nav-item {
+  margin-block: 25px;
+}
+.btn-close {
+  --bs-btn-close-bg: url("https://cdn-icons-png.flaticon.com/512/16684/16684890.png");
+}
+.offcanvas-header{
+  margin-left: auto;
+}
 .dropdown-menu {
   --bs-dropdown-link-hover-bg: none !important;
 }
@@ -54,7 +66,8 @@ a {
 
 /* Vanilla CSS */
 /* Common Classes */
-html,body{
+html,
+body {
   overflow-x: hidden !important;
 }
 body {
@@ -271,6 +284,11 @@ span {
 
   background-color: #141414;
 }
+#e-mail {
+  border: none;
+  outline: 1px solid white;
+  padding: 11px 70px 11px 10px;
+}
 .sub-footer h2 {
   max-width: 466px;
 }
@@ -357,6 +375,27 @@ ul li {
   }
   .flex-sm-column {
     flex-direction: column !important;
+  }
+    .nav-logo {
+    max-width: 75px;
+  }
+  .nav-logo > img {
+    max-width: 100%;
+    object-fit: contain;
+  }
+  #search {
+    max-width: 17px;
+  }
+  #search > img {
+    max-width: 100%;
+    object-fit: contain;
+  }
+  #cart {
+    max-width: 30px;
+  }
+  #cart > img {
+    max-width: 100%;
+    object-fit: contain;
   }
 
   /* About-banner-section */

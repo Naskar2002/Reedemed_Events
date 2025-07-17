@@ -26,26 +26,45 @@
 </head>
 
 <body class="bg-black">
-    <header>
-          <div class="header-top">
+    <header class="bg-black">
+        <div class="header-top">
             <div class="header-img">
                 <p class="text-black text-center py-2">Save 10% Off event ticket</p>
             </div>
         </div>
-        <nav class="navbar navbar-expand-lg  bg-black ">
 
+        <nav class="navbar navbar-expand-lg bg-black">
             <div class="container">
-
                 <a class="navbar-brand nav-logo" href="../index.html">
                     <img src="../assets/logo.png" alt="Nav-Bar-Logo">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav align-items-sm-center  ms-auto mb-2 mb-lg-0">
+
+
+
+                <!-- Toggle button visible only on small screens -->
+                <div class="d-flex gap-1 gap-md-3">
+                    <div class="d-flex d-lg-none flex-lg-row   ms-lg-1 align-items-center gap-2 gap-md-3">
+                        <a class="nav-link active" id="search" aria-current="page" href="#">
+                            <img src="../assets/search.png" alt="">
+                        </a>
+                        <a class="nav-link active" id="divider" aria-current="page" href="#">
+                            <img src="../assets/divider.png" alt="">
+                        </a>
+                        <a class="nav-link active" id="cart" aria-current="page" href="#">
+                            <img src="../assets/cart.png" alt="">
+                        </a>
+                    </div>
+                    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+
+                <!-- Normal Navbar links shown only on lg and above -->
+                <div class="collapse navbar-collapse d-none d-lg-flex justify-content-end">
+
+                    <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link xyz active text-light  me-1" aria-current="page"
                                 href="../html/events.html">Events</a>
@@ -74,6 +93,7 @@
                             </ul>
                         </li>
                     </ul>
+
                     <div class="d-flex flex-sm-column flex-lg-row   ms-lg-1 align-items-center gap-3">
                         <div class="d-flex  flex-lg-row   ms-lg-1 align-items-center gap-3">
                             <a class="nav-link active" id="search" aria-current="page" href="#">
@@ -91,12 +111,55 @@
                             <a class=" text-light text-decoration-none" href="">Create Your Event</a>
                         </button>
                     </div>
-
-
                 </div>
+
+                <!-- Offcanvas only visible on screens smaller than 992px -->
+                <div class="offcanvas offcanvas-end d-lg-none bg-black" tabindex="-1" id="offcanvasNavbar">
+                    <div class="offcanvas-header">
+
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                    </div>
+                    <div class="offcanvas-body ">
+                        <li class="nav-item">
+                            <a class="nav-link xyz active text-light  me-1" aria-current="page"
+                                href="../html/events.html">Events</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light me-1" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Resources
+                            </a>
+                            <ul class="dropdown-menu ">
+                                <li><a class="dropdown-item text-light" href="../html/about-us.html">About Us </a></li>
+                                <li><a class="dropdown-item text-light" href="../html/price.html">Fees</a></li>
+                                <li><a class="dropdown-item text-light" href="../html/help.html">Help Videos</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light  me-1" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Login
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item text-light" href="#">Register </a></li>
+                                <li><a class="dropdown-item text-light" href="#">Sign-in</a></li>
+
+                            </ul>
+                        </li>
+
+                        <div class="d-flex flex-sm-column flex-lg-row   ms-lg-1  gap-3">
+
+
+                            <button type="button" class="btn btn-primary px-19 py-11">
+                                <a class=" text-light text-decoration-none" href="">Create Your Event</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </nav>
-
     </header>
 
     <section class="question bg-black">
@@ -355,7 +418,7 @@
                         </div>
                         <p>Sign up for the latest news straight to your inbox.
                         </p>
-                        <input type="text" class="p-2 rounded-2 bg-transparent" placeholder="Enter your email"
+                        <input type="text" class=" rounded-2 bg-transparent" placeholder="Enter your email"
                             aria-label="email" id="e-mail">
                         <button type="button" class="btn btn-primary ">
                             <a class=" text-light text-decoration-none" href="">Join</a>
