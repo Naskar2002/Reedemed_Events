@@ -28,7 +28,7 @@ p {
 .btn-close {
   --bs-btn-close-bg: url("https://cdn-icons-png.flaticon.com/512/16684/16684890.png");
 }
-.offcanvas-header{
+.offcanvas-header {
   margin-left: auto;
 }
 .dropdown-menu {
@@ -274,6 +274,14 @@ footer .btn {
 .footer {
   margin-top: 55px;
 }
+.footer-logo,
+.footer-logo > a {
+  max-width: 113px;
+}
+.footer-logo > a > img {
+  max-width: 100%;
+  object-fit: contain;
+}
 .footer a:hover {
   color: #ba3e3e;
 }
@@ -385,6 +393,15 @@ ul li {
 
   .answer {
     font-size: 16px;
+  }
+
+  /* Sub-footer */
+  .sub-footer button {
+    width: 100%;
+    margin-top: 5px;
+  }
+  .sub-footer input[type="text"] {
+    width: 100%;
   }
 
   /* footer-section */

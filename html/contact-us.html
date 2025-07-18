@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact-Us</title>
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
     <!-- Favicon -->
     <link rel="icon" href="../assets/logo.png">
     <!-- Bootstrap CSS v5.2.1 -->
@@ -19,16 +21,16 @@
     <!-- Vanilla-CSS -->
     <link rel="stylesheet" href="../css/contact-us.css">
 
-      <!-- Aos -->
+    <!-- Aos -->
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- Nav-bar -->
+    <!-- Nav-bar -->
 
-   <header class="bg-black">
+    <header class="bg-black">
         <div class="header-top">
             <div class="header-img">
                 <p class="text-black text-center py-2">Save 10% Off event ticket</p>
@@ -174,11 +176,13 @@
                         <p>Lorem Ipsum is simply dumm yww text of the printing and tyetting industry. Lorem Ipsum has
                             been d
                             tyetting industry. </p>
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14741.289739058962!2d88.29402044905002!3d22.529591272354672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1751986673529!5m2!1sen!2sin"
-                            style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
+                        <a data-fancybox data-type="iframe"
+                            data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3969.0904539446196!2d88.43012830753696!3d22.57572281997851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0275eff23edf37%3A0xdc56c0a757ecff53!2sWebskitters%20Academy%20-%20Best%20IT%20Training%20Institute%20in%20Kolkata!5e0!3m2!1sen!2sin!4v1752853330698!5m2!1sen!2sin"
+                            data-width="800" data-height="600" href="javascript:;">
+                            <img src="../assets/map.png" alt="g-map" class="map">
+                        </a>
+
+
                     </div>
                     <div class="address mx-auto ">
                         <div class="location d-flex  align-items-baseline">
@@ -227,9 +231,9 @@
 
     </div>
 
+
     <!--Sub-footer & Footer -->
     <footer class="bg-black p-2">
-
         <!-- Sub-footer -->
 
         <div class="sub-footer mx-auto rounded-3">
@@ -326,7 +330,8 @@
 
 
 
-
+    <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
 
     <!-- Bootstrap-JS_CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

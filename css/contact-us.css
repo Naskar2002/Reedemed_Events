@@ -31,12 +31,11 @@ p {
 .btn-close {
   --bs-btn-close-bg: url("https://cdn-icons-png.flaticon.com/512/16684/16684890.png");
 }
-.offcanvas-header{
+.offcanvas-header {
   margin-left: auto;
 }
 .dropdown-menu {
   --bs-dropdown-link-hover-bg: none !important;
-  
 }
 a {
   text-decoration: none !important;
@@ -73,7 +72,8 @@ a {
 
 /* Vanilla CSS */
 /* Common Classes */
-html,body{
+html,
+body {
   overflow-x: hidden !important;
 }
 body {
@@ -108,7 +108,7 @@ span {
   object-fit: contain;
 }
 
-#search{
+#search {
   max-width: 24px;
 }
 #search > img {
@@ -139,7 +139,7 @@ span {
   max-width: 537px;
 }
 
-iframe {
+.map {
   width: 504px;
   height: 150px;
 }
@@ -174,7 +174,7 @@ textarea {
   border: none;
   outline: 1px solid white;
   margin-block: 16px;
-  width: 497px;
+  width: 100%;
 }
 /* textarea{
     background-color: transparent;
@@ -211,6 +211,14 @@ footer .btn {
 .footer {
   margin-top: 55px;
 }
+.footer-logo,
+.footer-logo > a {
+  max-width: 113px;
+}
+.footer-logo > a > img {
+  max-width: 100%;
+  object-fit: contain;
+}
 .footer a:hover {
   color: #ba3e3e;
 }
@@ -231,11 +239,11 @@ h4 {
   /* flex-wrap: wrap; */
   margin-top: 22px;
 }
-.social-media-icons > div{
+.social-media-icons > div {
   max-width: 40px;
   /* max-height: 100%; */
 }
-.social-media-icons>div>img{
+.social-media-icons > div > img {
   max-width: 100%;
   object-fit: cover;
 }
@@ -246,11 +254,9 @@ ul li {
   color: white;
   font-size: 14px;
 }
-
 /* Media-Queries */
 
 @media screen and (max-width: 576px) {
-
   h1 {
     font-size: 45px;
     margin-bottom: 18px;
@@ -298,7 +304,7 @@ ul li {
   .details {
     padding-top: 40px;
   }
-  iframe {
+  .map {
     width: 300px;
     height: 150px;
   }
@@ -309,16 +315,30 @@ ul li {
     margin-left: 0px;
     text-align: center;
   }
-  input,
-  textarea {
-    max-width: 230px;
+  .get-in-touch input,
+  .get-in-touch textarea {
+  width: 100%;
+  padding: 9px 4px;
+  margin-block:8px ;
+  }
+  .get-in-touch button {
+    width: 100%;
+  }
+
+  /* Sub-footer */
+  .sub-footer button {
+    width: 100%;
+    margin-top: 5px;
+  }
+  .sub-footer input[type="text"] {
+    width: 100%;
   }
 
   /* footer-section */
- .footer-logo,
-.footer-logo > a{
-  margin: 0 auto 10px;
-}
+  .footer-logo,
+  .footer-logo > a {
+    margin: 0 auto 10px;
+  }
   .footer .col-6 {
     flex: 0 0 auto;
     width: 100%;
@@ -330,13 +350,14 @@ ul li {
   .list {
     margin-top: 10px;
   }
-  .footer .list h4 ,.footer h4 {
+  .footer .list h4,
+  .footer h4 {
     text-align: center;
   }
   .footer .list ul {
     align-items: center;
   }
-  .social-media-icons{
+  .social-media-icons {
     margin: 0 auto;
   }
 }

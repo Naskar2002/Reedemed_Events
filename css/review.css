@@ -262,6 +262,14 @@ footer .btn {
   max-width: 100%;
   object-fit: contain;
 }
+.footer-logo,
+.footer-logo > a {
+  max-width: 113px;
+}
+.footer-logo > a > img {
+  max-width: 100%;
+  object-fit: contain;
+}
 .footer a:hover {
   color: #ba3e3e;
 }
